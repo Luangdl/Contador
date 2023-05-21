@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contador View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ContadorViewController" customModule="LearningTask_5_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="odS-of-kKi" userLabel="Stack View Principal">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZs-pd-JT5" userLabel="Titulo Label">
+                                        <rect key="frame" x="32" y="32" width="350" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wo1-aD-qW0" userLabel="Stack View central principal">
+                                        <rect key="frame" x="32" y="201" width="350" height="336.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQI-QM-xxX" userLabel="Número principal Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="286.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="240"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="O1E-83-krf" userLabel="Stack View minus e plus">
+                                                <rect key="frame" x="0.0" y="286.5" width="350" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQK-tZ-Fg6" userLabel="Menos Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system" buttonSize="large">
+                                                            <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="botaoDecrementa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="po9-T7-Tg4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naz-tq-hWL" userLabel="Mais Button">
+                                                        <rect key="frame" x="215" y="0.0" width="135" height="50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" buttonSize="large">
+                                                            <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="botaoAddIncremento:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljB-Kg-N0i"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="GoV-Qq-qdg" userLabel="Stack View inferior principal">
+                                        <rect key="frame" x="32" y="667.5" width="350" height="114.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHp-qn-6Sl">
+                                                <rect key="frame" x="0.0" y="80" width="67.5" height="34.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Reset">
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ITk-Xs-fux"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VZR-8A-S81" userLabel="Stack View Reset e Incremento">
+                                                <rect key="frame" x="256" y="0.0" width="94" height="114.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="padrão de  incremento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZi-Dw-XvR" userLabel="Padrao incremento Label">
+                                                        <rect key="frame" x="13" y="0.0" width="68.5" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfm-Ni-Hb4" userLabel="Número incremento Label">
+                                                        <rect key="frame" x="36" y="35.5" width="22" height="43"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="pJG-Wi-A4i">
+                                                        <rect key="frame" x="0.0" y="82.5" width="94" height="32"/>
+                                                        <connections>
+                                                            <action selector="buttonStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="iAx-gB-R3j"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Satin Linen"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="32" leading="32" bottom="32" trailing="32"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="Satin Linen"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="odS-of-kKi" secondAttribute="trailing" id="EdH-oX-lw4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="odS-of-kKi" secondAttribute="bottom" id="O1Q-LD-uUc"/>
+                            <constraint firstItem="odS-of-kKi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bNT-H3-ot1"/>
+                            <constraint firstItem="odS-of-kKi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z6x-Jd-QSp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numeroIncrementadorLabel" destination="Dfm-Ni-Hb4" id="bc8-2J-myy"/>
+                        <outlet property="numeroPrincipalLabel" destination="VQI-QM-xxX" id="n2u-N9-0xw"/>
+                        <outlet property="stepper" destination="pJG-Wi-A4i" id="92Z-Xz-MT3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="Satin Linen">
+            <color red="0.91399997472763062" green="0.9100000262260437" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
